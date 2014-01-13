@@ -1,6 +1,6 @@
 Kael
 ====
-(under development) Kael is a NodeJS build engine/script that aims flexibility and easy way to blog converting markdown to HTML.
+(under development) Kael is a NodeJS build engine/script that aims flexibility and easy way to generate static HTML from markdown.
 
 ## History
 Soon
@@ -22,8 +22,6 @@ node kael.js
 ```
 
 ## Contributing
-
-In lieu of a formal styleguide, take care to maintain the existing coding style, please do follow [idiomatic.js](https://github.com/rwldrn/idiomatic.js) and always lint and test your code using [grunt](https://github.com/cowboy/grunt)
 
 1. Fork it!
 2. Create your feature branch: `git checkout -b my-new-feature`
