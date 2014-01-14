@@ -1,4 +1,3 @@
-
 (function() {
     'use strict';
 
@@ -74,7 +73,7 @@ function createFolder(folder, file) {
  */
 function removeFolder(folder) {
     var command = 'rm -rf ' + folder;
-    exec('rm -rf test',function(error, out) {
+    exec(command, function(error, out) {
         console.log('Folder: ' + folder + ' removed');
     });
 }
