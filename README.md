@@ -1,6 +1,6 @@
 Kael
 ====
-(under development) Kael is a NodeJS build engine/script that aims flexibility and easy way to generate static HTML from markdown.
+(Work in progress) Kael is a NodeJS build engine/script that aims flexibility and easy way to generate static HTML from markdown.
 
 ## History
 Soon
