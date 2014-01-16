@@ -1,6 +1,6 @@
 {
   "name": "Kael",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Kael is a NodeJS build engine/script that aims flexibility and easy way to blog converting markdown to HTML",
   "main": "kael.js",
   "scripts": {
@@ -20,6 +20,7 @@
   "author": "Michael Lancaster",
   "license": "MIT",
   "dependencies": {
-    "marked": "~0.3.0"
+    "marked": "~0.3.0",
+    "cli-color": "~0.2.3"
   }
 }
