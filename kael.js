@@ -114,8 +114,7 @@ function readMarkdown() {
             var fileName = file.substring(0, file.indexOf('.'));
             var folder = blogFolder + fileName;
 
-            createFolder(folder, fileName);
-            createHTML(file, fileName);
+            removeFolder(folder, fileName);
         }
 
         rl.close();
@@ -129,13 +128,12 @@ function readMarkdown() {
  * @param file [file name]
  * @method createNewFolder
  */
-function createFolder(folder, file) {
+function createFolder(folder, fileName) {
 
     if ( !fs.existsSync(folder) ) {
         fs.mkdirSync(folder);
         console.log( logWarn('Folder: ' + folder + ' created.') );
-    } else {
-        removeFolder(folder);
+        createHTML(folder, fileName);
     }
 }
 
@@ -144,10 +142,11 @@ function createFolder(folder, file) {
  * @param  folder [folder name]
  * @method removeFolder
  */
-function removeFolder(folder) {
+function removeFolder(folder, fileName) {
     var command = 'rm -rf ' + folder;
     exec(command, function(error, out) {
         console.log( logWarn('Folder: ' + folder + ' removed') );
+        createFolder(folder, fileName);
     });
 }
 
@@ -155,13 +154,13 @@ function removeFolder(folder) {
  * Responsible to convert markdown file to HTML
  * @method convertFile
  */
-function createHTML(file, fileName) {
-    var path = markdownFolder + file;
+function createHTML(file, folderName) {
+    var path = markdownFolder + folderName + '.md';
 
     fs.readFile(path, function(error, data) {
         var formatted = data.toString();
         var html = marked(formatted);
-        var htmlPath = blogFolder + fileName + '/' + fileName + '.html';
+        var htmlPath = blogFolder + folderName + '/' + folderName + '.html';
 
         fs.writeFile(htmlPath, html, function (error) {
             if ( error ) {
