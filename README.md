@@ -9,7 +9,7 @@ npm install
 
 Run the server
 ```ruby
-node kael.js
+node index.js
 ```
 
 ## Contributing
