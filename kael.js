@@ -12,17 +12,15 @@ var kael = require('./lib/kael')
 
         if (typeof f == "object" && prev === null && curr === null) {
           console.log(dateNow, 'Watch markdown files running!');
-          kael();
         } else if (prev === null) {
           console.log(dateNow, 'New markdown file added');
-          kael();
         } else if (curr.nlink === 0) {
           console.log(dateNow, 'Markdown file removed');
-          kael();
         } else {
           console.log(dateNow, 'Markdown file changed');
-          kael();
         }
+
+        kael();
     });
 
 })();
