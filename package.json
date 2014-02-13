@@ -12,15 +12,14 @@
   "keywords": [
     "markdown",
     "html",
-    "md",
     "blog",
-    "grunt",
-    "convert"
   ],
   "author": "Michael Lancaster",
   "license": "MIT",
   "dependencies": {
     "marked": "~0.3.0",
-    "cli-color": "~0.2.3"
+    "cli-color": "~0.2.3",
+    "watch": "~0.9.0",
+    "moment": "~2.5.1"
   }
 }
